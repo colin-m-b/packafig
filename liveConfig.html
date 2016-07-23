@@ -1,0 +1,109 @@
+<!doctype html>
+<head>
+  <title>Live Config</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="client/styles/style.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-sm-3 col-md-3 col-lg-3"></div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <img src="./assets/PACKAFIG-white-bkgd.jpg" />
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div id="live-config">
+      <div class="row" id="row1">
+        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+        <div> module.exports: { </div>
+      </div>
+      <div class="row" id="row2">
+        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          entry:
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          {{ appCtrl.entry }},
+        </div>
+      </div>
+      <div class="row" id="row3">
+        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          output: {
+        </div>
+      </div>
+      <div class="row" id="row4">
+        <div class="col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-sm-1 col-md-1 col-lg-1">
+          path:
+        </div>
+        <div>
+          {{ appCtrl.outputPath }},
+        </div>
+      </div>
+      <div class="row" id="row5">
+        <div class="col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-sm-1 col-md-1 col-lg-1">
+          filename:
+        </div>
+        <div>
+          {{ appCtrl.outputFilename }},
+        </div>
+      </div>
+      <div class="row" id="row6">
+        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-sm-1 col-md-1 col-lg-1">
+        },
+        </div>
+      </div>
+      <div class="row" id="row7">
+        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          module: {
+        </div>
+      </div>
+      <div class="row" id="row8">
+        <div class="col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          loaders: [
+        </div>
+      </div>
+      <div class="row" id="row9">
+        <div class="col-sm-5 col-md-5 col-lg-5"></div>
+        <div>
+          {
+        </div>
+      </div>
+      <div class="row" id="row10">
+        <div class="col-sm-6 col-md-6 col-lg-6"></div>
+        <div>
+          test: /\.css$/, loader: 'style!css',
+        </div>
+      </div>
+      <div class="row" id="row11">
+        <div class="col-sm-5 col-md-5 col-lg-5"></div>
+        <div>
+        },
+        </div>
+      </div>
+      <div class="row" id="row12">
+        <div class="col-sm-5 col-md-5 col-lg-5"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          ],
+        </div>
+      </div>
+      <div class="row" id="row13">
+        <div class="col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          },
+        </div>
+      </div>
+      <div class="row" id="row14">
+        <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          };
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

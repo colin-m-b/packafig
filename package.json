@@ -1,0 +1,41 @@
+{
+  "name": "packafig",
+  "version": "1.0.0",
+  "description": "Webpack Config File Builder",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packafig/packafig.git"
+  },
+  "keywords": [
+    "webpack",
+    "config",
+    "file",
+    "builder"
+  ],
+  "author": "Allison Hanna, Colin Brownlie, Yandri Sanchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/packafig/packafig/issues"
+  },
+  "homepage": "https://github.com/packafig/packafig#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-mocks": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "nodemon": "^1.9.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

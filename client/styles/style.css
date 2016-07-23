@@ -1,0 +1,8 @@
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  color: blue;
+}
+
+p, input {
+  font-size:1.5em;
+}
