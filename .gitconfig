@@ -1,0 +1,30 @@
+[user]  name = colin-m-b
+email = cmbrownlie@hotmail.com
+
+[credential]
+helper = cache
+help = cache --timeout 1800
+# [core]
+# autocrlf = input
+# safecrlf = warn
+# editor = vim
+# whitespace = tra  iling-space,tabwidth=2
+# [push]
+# default = simple
+# [alias]
+# co = checkout
+# ci = commit
+# st = status
+# br = branch
+# hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+# type = cat-file -t
+# dump = cat-file -p
+# ga=git add
+# gb=git branch
+# gc=git commit
+# gd=git diff
+# go=git checkout
+# gk=gitk --all&
+# gx=gitx --all
+# pum=pull upstream master
+# pom=pull origin master
