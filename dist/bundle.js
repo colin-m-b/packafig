@@ -45,28 +45,40 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	const angular = __webpack_require__(1);
+	const app = angular.module('packafig', ['ngRoute']);
+	let info = {};
 
-	const app = angular
-	  .module('myApp', [
-	    'ngRoute',
-	    'Packafig.HomeController',
-	  ]);
-
-	function configFunction($routeProvider) {
+	app.config(function($routeProvider) {
 	  $routeProvider
-	    .when('/', {
-	      templateUrl: './partials/home.html',
-	      controller: 'HomeController',
-	    });
-	}
+	  .when('/', {
+	    templateUrl: './partials/production.html',
+	    controller: 'questionsController',
+	  });
+	});
 
-	app.config(configFunction);
-
-	angular.module('packafig', [])
-	.controller('AppController', () => {
-	  this.entry;
-	  this.outputPath;
-	  this.outputFilename;
+	app.controller('questionsController', function($scope, $http) {
+	  $scope.options = {
+	    entry: '',
+	    fileName: '',
+	    fileOutput: '',
+	  };
+	  $scope.makeFile = function() {
+	    console.log('firing');
+	    info = {
+	      entry: $scope.options.entry,
+	      output: {
+	        path: $scope.options.fileOutput,
+	        filename: $scope.options.fileName,
+	      },
+	    };
+	    $http.post('/', JSON.stringify(info));
+	  };
+	  $scope.loaders = ['sourceMap', 'minimize', 'debug', 'webpack', 'target'];
+	  $scope.questions = [
+	    'What is your entry file?',
+	    'Define the output file path:',
+	    'What do you want to name the output file?',
+	  ];
 	});
 
 

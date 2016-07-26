@@ -1,3 +1,148 @@
-<h1>Production</h1>
+<!DOCTYPE html>
+<div class="container-fluid">
+  <div class="row">
+    <div class="container col-sm-6 col-md-6 col-lg-6">
+      <div class="row">
+        <div class="form-group">
+          <label class="col-sm-6 col-md-6 col-lg-6 control-label" for="entry">{{questions[0]}}</label>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input id="entry" name="textinput" type="text" placeholder="Entry Filename" class="form-control input-md" ng-model="options.entry">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label class="col-sm-6 col-md-6 col-lg-6 control-label" for="textinput">{{questions[1]}}</label>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input id="output-path" name="textinput" type="text" placeholder="Output Path" class="form-control input-md" ng-model="options.filepath">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label class="col-sm-6 col-md-6 col-lg-6 control-label" for="textinput">{{questions[2]}}</label>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <input id="output-filename" name="textinput" type="text" placeholder="Output Filename" class="form-control input-md" ng-model="options.filename">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <br />
+          <br />
+        </div>
+        <div id="dl-buttons">
+          <button class="btn btn-default" id="save" ng-click="makeFile()"><span class="glyphicon glyphicon-floppy-disk"></span>  Click to commit options</button>
+          <a href="data.js" class="btn btn-default" role="button" download><span class="glyphicon glyphicon-cloud-download"></span>  Download</a>
+        </div>
+      </div>
+    </div>
+    <div class="container col-sm-6 col-md-6 col-lg-6">
+      <div class="container col-sm-2 col-md-2 col-lg-2"> </div>
+      <div id="loader-selections">
+        <div class="col-sm-6 col-md-6 col-lg-6" id="loader-list">
+          <select size="10" id="loaders" multiple class="form-control">
+            <option ng-repeat="loader in loaders">
+              {{loader}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p>{{message}}</p>
+  <div class="col-sm-2 col-md-2 col-lg-2"></div>
+  <div class="col-sm-8 col-md-8 col-lg-8" id="live-config">
+    <div class="row" id="row1">
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
+      <div> module.exports: { </div>
+    </div>
+    <div class="row" id="row2">
+      <div class="col-sm-3 col-md-3 col-lg-3"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        entry:
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <p>'{{ options.entry }}',</p>
+      </div>
+    </div>
+    <div class="row" id="row3">
+      <div class="col-sm-3 col-md-3 col-lg-3"></div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        output: {
+        </div>
+    </div>
+    <div class="row" id="row4">
+      <div class="col-sm-4 col-md-4 col-lg-4"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        path:
+      </div>
+      <div>
+        {{ options.filepath }},
+      </div>
+    </div>
+    <div class="row" id="row5">
+      <div class="col-sm-4 col-md-4 col-lg-4"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        filename:
+      </div>
+      <div>
+        '{{ options.filename }}',
+      </div>
+    </div>
+    <div class="row" id="row6">
+      <div class="col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-sm-1 col-md-1 col-lg-1">
+          },
+        </div>
+    </div>
+    <div class="row" id="row7">
+      <div class="col-sm-3 col-md-3 col-lg-3"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        module: {
+      </div>
+    </div>
+    <div class="row" id="row8">
+      <div class="col-sm-4 col-md-4 col-lg-4"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        loaders: [
+      </div>
+    </div>
+    <div class="row" id="row9">
+      <div class="col-sm-5 col-md-5 col-lg-5"></div>
+      <div>
+        {
+        </div>
+      </div>
+    <div class="row" id="row10">
+      <div class="col-sm-6 col-md-6 col-lg-6"></div>
+      <div>
+        test: /\.css$/, loader: 'style!css',
+      </div>
+    </div>
+    <div class="row" id="row11">
+      <div class="col-sm-5 col-md-5 col-lg-5"></div>
+      <div>
+        },
+      </div>
+    </div>
+    <div class="row" id="row12">
+      <div class="col-sm-5 col-md-5 col-lg-5"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        ],
+      </div>
+    </div>
+    <div class="row" id="row13">
+      <div class="col-sm-4 col-md-4 col-lg-4"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        },
+      </div>
+    </div>
+    <div class="row" id="row14">
+      <div class="col-sm-3 col-md-3 col-lg-3"></div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        };
+      </div>
+    </div>
+  </div>
+</div>

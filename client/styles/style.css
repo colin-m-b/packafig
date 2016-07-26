@@ -1,8 +1,29 @@
+@import 'https://fonts.googleapis.com/css?family=Questrial';
+
 body {
-  font-family: Arial, Helvetica, Sans-Serif;
-  color: blue;
+  margin-left: 20px;
+  font-family: 'Questrial', sans-serif;
 }
 
-p, input {
-  font-size:1.5em;
+#main-logo {
+  height: 80%;
+}
+
+#live-config{
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: #7FA1FF;
+  color: #04102F;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 36px;
+}
+
+#download {
+  display: block;
+}
+
+#dl-buttons {
+  margin-top: 20px;
+  margin: 0 auto;
 }

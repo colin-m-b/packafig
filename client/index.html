@@ -2,25 +2,33 @@
 <html lang="en" ng-app="packafig">
 <head>
   <meta charset="UTF-8">
-  <title></title>
-
+  <title>Packafig: Webpack Config File Builder</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="./controllers/questionsController.js"></script>
-
   <script type="text/javascript" src="app.js"></script>
 
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
-   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-controller="questionsController">
-  <!--Notice the link with the octothorpe first-->
-  <!--Our templates are rendered here-->
-  <div id="main">
-    <div ng-view>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-3 col-lg-3"></div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <img id="main-logo" src="./assets/PACKAFIG-white-bkgd.jpg" />
+      </div>
     </div>
   </div>
-  
+  <div id="main">
+    <div ng-view>
+
+    </div>
+  </div>
+
 </body>
 </html>
